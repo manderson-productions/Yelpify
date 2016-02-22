@@ -1,0 +1,503 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		22EF76631C7A5CBB00951729 /* MANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF76621C7A5CBB00951729 /* MANetworkManager.m */; };
+		22EF766F1C7A630900951729 /* MARequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF766E1C7A630900951729 /* MARequestBuilder.m */; };
+		22EF76731C7A769B00951729 /* MABusinessCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */; };
+		22EF76771C7A7E6400951729 /* MAHomeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF76761C7A7E6400951729 /* MAHomeCollectionViewController.m */; };
+		22EF76791C7A80B000951729 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22EF76781C7A80B000951729 /* Main.storyboard */; };
+		22EF767B1C7ADEA300951729 /* MAActivityIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22EF767A1C7ADEA300951729 /* MAActivityIndicatorView.swift */; };
+		22F353311C7A52EB00811E94 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F353301C7A52EB00811E94 /* AppDelegate.swift */; };
+		22F353381C7A52EB00811E94 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 22F353371C7A52EB00811E94 /* Assets.xcassets */; };
+		22F3533B1C7A52EB00811E94 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 22F353391C7A52EB00811E94 /* LaunchScreen.storyboard */; };
+		22F353461C7A52EC00811E94 /* YelpifyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F353451C7A52EC00811E94 /* YelpifyTests.swift */; };
+		C06B05A24D6A879E82C9C4EA /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 59B252EF20D9DF6E0818ADFB /* Pods.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		22F353421C7A52EC00811E94 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 22F353251C7A52EB00811E94 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 22F3532C1C7A52EB00811E94;
+			remoteInfo = Yelpify;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		22EF76611C7A5CBB00951729 /* MANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANetworkManager.h; sourceTree = "<group>"; };
+		22EF76621C7A5CBB00951729 /* MANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANetworkManager.m; sourceTree = "<group>"; };
+		22EF766D1C7A630900951729 /* MARequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARequestBuilder.h; sourceTree = "<group>"; };
+		22EF766E1C7A630900951729 /* MARequestBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MARequestBuilder.m; sourceTree = "<group>"; };
+		22EF76701C7A769B00951729 /* MABusinessCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABusinessCollectionViewCell.h; sourceTree = "<group>"; };
+		22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABusinessCollectionViewCell.m; sourceTree = "<group>"; };
+		22EF76751C7A7E6400951729 /* MAHomeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHomeCollectionViewController.h; sourceTree = "<group>"; };
+		22EF76761C7A7E6400951729 /* MAHomeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHomeCollectionViewController.m; sourceTree = "<group>"; };
+		22EF76781C7A80B000951729 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		22EF767A1C7ADEA300951729 /* MAActivityIndicatorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MAActivityIndicatorView.swift; sourceTree = "<group>"; };
+		22F3532D1C7A52EB00811E94 /* Yelpify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Yelpify.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F353301C7A52EB00811E94 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		22F353371C7A52EB00811E94 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		22F3533A1C7A52EB00811E94 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		22F3533C1C7A52EB00811E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F353411C7A52EC00811E94 /* YelpifyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = YelpifyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		22F353451C7A52EC00811E94 /* YelpifyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = YelpifyTests.swift; sourceTree = "<group>"; };
+		22F353471C7A52EC00811E94 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		22F353501C7A531600811E94 /* Yelpify-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Yelpify-Bridging-Header.h"; sourceTree = "<group>"; };
+		59B252EF20D9DF6E0818ADFB /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A948709FCC8FE624A0E4494 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		B253E6E70A25F9E0F380C74D /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		22F3532A1C7A52EB00811E94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C06B05A24D6A879E82C9C4EA /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F3533E1C7A52EC00811E94 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		22F353241C7A52EB00811E94 = {
+			isa = PBXGroup;
+			children = (
+				22F3532F1C7A52EB00811E94 /* Yelpify */,
+				22F353441C7A52EC00811E94 /* YelpifyTests */,
+				22F3532E1C7A52EB00811E94 /* Products */,
+				BEB9A74195A527EF4D47633D /* Pods */,
+				654CECF6530B293292843E65 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		22F3532E1C7A52EB00811E94 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				22F3532D1C7A52EB00811E94 /* Yelpify.app */,
+				22F353411C7A52EC00811E94 /* YelpifyTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		22F3532F1C7A52EB00811E94 /* Yelpify */ = {
+			isa = PBXGroup;
+			children = (
+				22F353301C7A52EB00811E94 /* AppDelegate.swift */,
+				22F353371C7A52EB00811E94 /* Assets.xcassets */,
+				22F353391C7A52EB00811E94 /* LaunchScreen.storyboard */,
+				22F3533C1C7A52EB00811E94 /* Info.plist */,
+				22F353501C7A531600811E94 /* Yelpify-Bridging-Header.h */,
+				22EF76611C7A5CBB00951729 /* MANetworkManager.h */,
+				22EF76621C7A5CBB00951729 /* MANetworkManager.m */,
+				22EF766D1C7A630900951729 /* MARequestBuilder.h */,
+				22EF766E1C7A630900951729 /* MARequestBuilder.m */,
+				22EF76701C7A769B00951729 /* MABusinessCollectionViewCell.h */,
+				22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */,
+				22EF76751C7A7E6400951729 /* MAHomeCollectionViewController.h */,
+				22EF76761C7A7E6400951729 /* MAHomeCollectionViewController.m */,
+				22EF76781C7A80B000951729 /* Main.storyboard */,
+				22EF767A1C7ADEA300951729 /* MAActivityIndicatorView.swift */,
+			);
+			path = Yelpify;
+			sourceTree = "<group>";
+		};
+		22F353441C7A52EC00811E94 /* YelpifyTests */ = {
+			isa = PBXGroup;
+			children = (
+				22F353451C7A52EC00811E94 /* YelpifyTests.swift */,
+				22F353471C7A52EC00811E94 /* Info.plist */,
+			);
+			path = YelpifyTests;
+			sourceTree = "<group>";
+		};
+		654CECF6530B293292843E65 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				59B252EF20D9DF6E0818ADFB /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BEB9A74195A527EF4D47633D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				B253E6E70A25F9E0F380C74D /* Pods.debug.xcconfig */,
+				9A948709FCC8FE624A0E4494 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		22F3532C1C7A52EB00811E94 /* Yelpify */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F3534A1C7A52EC00811E94 /* Build configuration list for PBXNativeTarget "Yelpify" */;
+			buildPhases = (
+				0C84005ABCA0714A97A9D797 /* Check Pods Manifest.lock */,
+				22F353291C7A52EB00811E94 /* Sources */,
+				22F3532A1C7A52EB00811E94 /* Frameworks */,
+				22F3532B1C7A52EB00811E94 /* Resources */,
+				61CE43660CD4C768A5CA1DDE /* Embed Pods Frameworks */,
+				5B0DADA6754503E6793AC78B /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Yelpify;
+			productName = Yelpify;
+			productReference = 22F3532D1C7A52EB00811E94 /* Yelpify.app */;
+			productType = "com.apple.product-type.application";
+		};
+		22F353401C7A52EC00811E94 /* YelpifyTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 22F3534D1C7A52EC00811E94 /* Build configuration list for PBXNativeTarget "YelpifyTests" */;
+			buildPhases = (
+				22F3533D1C7A52EC00811E94 /* Sources */,
+				22F3533E1C7A52EC00811E94 /* Frameworks */,
+				22F3533F1C7A52EC00811E94 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				22F353431C7A52EC00811E94 /* PBXTargetDependency */,
+			);
+			name = YelpifyTests;
+			productName = YelpifyTests;
+			productReference = 22F353411C7A52EC00811E94 /* YelpifyTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		22F353251C7A52EB00811E94 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = markmakingmusic;
+				TargetAttributes = {
+					22F3532C1C7A52EB00811E94 = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					22F353401C7A52EC00811E94 = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = 22F3532C1C7A52EB00811E94;
+					};
+				};
+			};
+			buildConfigurationList = 22F353281C7A52EB00811E94 /* Build configuration list for PBXProject "Yelpify" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 22F353241C7A52EB00811E94;
+			productRefGroup = 22F3532E1C7A52EB00811E94 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				22F3532C1C7A52EB00811E94 /* Yelpify */,
+				22F353401C7A52EC00811E94 /* YelpifyTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		22F3532B1C7A52EB00811E94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22EF76791C7A80B000951729 /* Main.storyboard in Resources */,
+				22F3533B1C7A52EB00811E94 /* LaunchScreen.storyboard in Resources */,
+				22F353381C7A52EB00811E94 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F3533F1C7A52EC00811E94 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0C84005ABCA0714A97A9D797 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		5B0DADA6754503E6793AC78B /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		61CE43660CD4C768A5CA1DDE /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		22F353291C7A52EB00811E94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F353311C7A52EB00811E94 /* AppDelegate.swift in Sources */,
+				22EF76731C7A769B00951729 /* MABusinessCollectionViewCell.m in Sources */,
+				22EF76771C7A7E6400951729 /* MAHomeCollectionViewController.m in Sources */,
+				22EF76631C7A5CBB00951729 /* MANetworkManager.m in Sources */,
+				22EF766F1C7A630900951729 /* MARequestBuilder.m in Sources */,
+				22EF767B1C7ADEA300951729 /* MAActivityIndicatorView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		22F3533D1C7A52EC00811E94 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				22F353461C7A52EC00811E94 /* YelpifyTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		22F353431C7A52EC00811E94 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 22F3532C1C7A52EB00811E94 /* Yelpify */;
+			targetProxy = 22F353421C7A52EC00811E94 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		22F353391C7A52EB00811E94 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				22F3533A1C7A52EB00811E94 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		22F353481C7A52EC00811E94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22F353491C7A52EC00811E94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		22F3534B1C7A52EC00811E94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B253E6E70A25F9E0F380C74D /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Yelpify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manderson.Yelpify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yelpify/Yelpify-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		22F3534C1C7A52EC00811E94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A948709FCC8FE624A0E4494 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				INFOPLIST_FILE = Yelpify/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manderson.Yelpify;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Yelpify/Yelpify-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		22F3534E1C7A52EC00811E94 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YelpifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manderson.YelpifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yelpify.app/Yelpify";
+			};
+			name = Debug;
+		};
+		22F3534F1C7A52EC00811E94 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = YelpifyTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.manderson.YelpifyTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Yelpify.app/Yelpify";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		22F353281C7A52EB00811E94 /* Build configuration list for PBXProject "Yelpify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F353481C7A52EC00811E94 /* Debug */,
+				22F353491C7A52EC00811E94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F3534A1C7A52EC00811E94 /* Build configuration list for PBXNativeTarget "Yelpify" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F3534B1C7A52EC00811E94 /* Debug */,
+				22F3534C1C7A52EC00811E94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		22F3534D1C7A52EC00811E94 /* Build configuration list for PBXNativeTarget "YelpifyTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22F3534E1C7A52EC00811E94 /* Debug */,
+				22F3534F1C7A52EC00811E94 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 22F353251C7A52EB00811E94 /* Project object */;
+}
