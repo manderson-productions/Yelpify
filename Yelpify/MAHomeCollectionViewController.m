@@ -125,7 +125,9 @@ static CGFloat const kNumCellsPerRow = 3.0;
 - (void)cacheResults:(NSArray *)results withCompletionBlock:(void(^)(void))completionBlock {
     __block NSMutableArray *imageURLs = [NSMutableArray arrayWithCapacity:results.count];
     [results enumerateObjectsUsingBlock:^(NSDictionary * _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-        [imageURLs addObject:[NSURL URLWithString:obj[@"image_url"]]];
+        if (obj[@"image_url"]) {
+            [imageURLs addObject:[NSURL URLWithString:obj[@"image_url"]]];
+        }
     }];
     [self.imageCache cacheImagesFromURLStrings:imageURLs withCompletionBlock:^{
         if (completionBlock) {

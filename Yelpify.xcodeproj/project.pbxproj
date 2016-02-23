@@ -83,6 +83,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2298C16D1C7C3E2400684025 /* Cache Module */ = {
+			isa = PBXGroup;
+			children = (
+				223B87621C7BB86D00E6E934 /* MAImageCache.h */,
+				223B87631C7BB86D00E6E934 /* MAImageCache.m */,
+				223B87651C7BC97B00E6E934 /* MACacheObject.h */,
+				223B87661C7BC97B00E6E934 /* MACacheObject.m */,
+			);
+			name = "Cache Module";
+			sourceTree = "<group>";
+		};
+		2298C16E1C7C3E4300684025 /* Network Module */ = {
+			isa = PBXGroup;
+			children = (
+				22EF76611C7A5CBB00951729 /* MANetworkManager.h */,
+				22EF76621C7A5CBB00951729 /* MANetworkManager.m */,
+				22EF766D1C7A630900951729 /* MARequestBuilder.h */,
+				22EF766E1C7A630900951729 /* MARequestBuilder.m */,
+			);
+			name = "Network Module";
+			sourceTree = "<group>";
+		};
+		2298C16F1C7C3E5300684025 /* Location Module */ = {
+			isa = PBXGroup;
+			children = (
+				223B87681C7C1C3F00E6E934 /* MALocationManager.h */,
+				223B87691C7C1C3F00E6E934 /* MALocationManager.m */,
+			);
+			name = "Location Module";
+			sourceTree = "<group>";
+		};
+		2298C1701C7C3E5F00684025 /* Custom UI Module */ = {
+			isa = PBXGroup;
+			children = (
+				22EF76701C7A769B00951729 /* MABusinessCollectionViewCell.h */,
+				22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */,
+				22EF767A1C7ADEA300951729 /* MAActivityIndicatorView.swift */,
+			);
+			name = "Custom UI Module";
+			sourceTree = "<group>";
+		};
+		2298C1711C7C3E7900684025 /* Home Collection View Module */ = {
+			isa = PBXGroup;
+			children = (
+				22EF76751C7A7E6400951729 /* MAHomeCollectionViewController.h */,
+				22EF76761C7A7E6400951729 /* MAHomeCollectionViewController.m */,
+			);
+			name = "Home Collection View Module";
+			sourceTree = "<group>";
+		};
+		2298C1721C7C3E9200684025 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				22F353391C7A52EB00811E94 /* LaunchScreen.storyboard */,
+				22EF76781C7A80B000951729 /* Main.storyboard */,
+			);
+			name = Storyboards;
+			sourceTree = "<group>";
+		};
 		22F353241C7A52EB00811E94 = {
 			isa = PBXGroup;
 			children = (
@@ -107,26 +166,15 @@
 			isa = PBXGroup;
 			children = (
 				22F353301C7A52EB00811E94 /* AppDelegate.swift */,
+				2298C1721C7C3E9200684025 /* Storyboards */,
+				2298C1711C7C3E7900684025 /* Home Collection View Module */,
+				2298C1701C7C3E5F00684025 /* Custom UI Module */,
+				2298C16F1C7C3E5300684025 /* Location Module */,
+				2298C16E1C7C3E4300684025 /* Network Module */,
+				2298C16D1C7C3E2400684025 /* Cache Module */,
 				22F353371C7A52EB00811E94 /* Assets.xcassets */,
-				22F353391C7A52EB00811E94 /* LaunchScreen.storyboard */,
 				22F3533C1C7A52EB00811E94 /* Info.plist */,
 				22F353501C7A531600811E94 /* Yelpify-Bridging-Header.h */,
-				22EF76611C7A5CBB00951729 /* MANetworkManager.h */,
-				22EF76621C7A5CBB00951729 /* MANetworkManager.m */,
-				22EF766D1C7A630900951729 /* MARequestBuilder.h */,
-				22EF766E1C7A630900951729 /* MARequestBuilder.m */,
-				22EF76701C7A769B00951729 /* MABusinessCollectionViewCell.h */,
-				22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */,
-				22EF76751C7A7E6400951729 /* MAHomeCollectionViewController.h */,
-				22EF76761C7A7E6400951729 /* MAHomeCollectionViewController.m */,
-				22EF76781C7A80B000951729 /* Main.storyboard */,
-				22EF767A1C7ADEA300951729 /* MAActivityIndicatorView.swift */,
-				223B87621C7BB86D00E6E934 /* MAImageCache.h */,
-				223B87631C7BB86D00E6E934 /* MAImageCache.m */,
-				223B87651C7BC97B00E6E934 /* MACacheObject.h */,
-				223B87661C7BC97B00E6E934 /* MACacheObject.m */,
-				223B87681C7C1C3F00E6E934 /* MALocationManager.h */,
-				223B87691C7C1C3F00E6E934 /* MALocationManager.m */,
 			);
 			path = Yelpify;
 			sourceTree = "<group>";
