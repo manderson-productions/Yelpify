@@ -47,27 +47,21 @@ static CGFloat const kNumCellsPerRow = 3.0;
         if (!strongSelf) { return; }
 
         if (status == kCLAuthorizationStatusDenied) {
-            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Yelpify"
-                                                                                     message:@"If you would like to see specific \
-                                                  businesses in your location, please turn \
-                                                  on location services in your settings."
-                                                                              preferredStyle:UIAlertControllerStyleAlert];
-            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"No thanks"
-                                                                   style:UIAlertActionStyleCancel
-                                                                 handler:^(UIAlertAction * _Nonnull action) {
-                                                                     [strongSelf requestBusinesses];
-                                                                 }];
-            UIAlertAction *openSettingsAction = [UIAlertAction actionWithTitle:@"Take me there"
-                                                                         style:UIAlertActionStyleDefault
-                                                                       handler:^(UIAlertAction * _Nonnull action) {
-                                                                           NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
-                                                                           if (settingsURL) {
-                                                                               [[UIApplication sharedApplication] openURL:settingsURL];
-                                                                           }
-                                                                       }];
-            [alertController addAction:cancelAction];
-            [alertController addAction:openSettingsAction];
-            [strongSelf presentViewController:alertController animated:YES completion:nil];
+            NSString *message = @"If you would like to see specific businesses in your location, \
+                                please turn on location services in your settings.";
+            [strongSelf showAlertControllerWithMessage:message
+                                           cancelTitle:@"No thanks"
+                                          defaultTitle:@"Take me there"
+                             withActionCompletionBlock:^(UIAlertAction *action) {
+                                 if (action.style == UIAlertActionStyleCancel) {
+                                     [strongSelf requestBusinesses];
+                                 } else {
+                                     NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                                     if (settingsURL) {
+                                         [[UIApplication sharedApplication] openURL:settingsURL];
+                                     }
+                                 }
+                             }];
         } else {
             [strongSelf requestBusinesses];
         }
@@ -95,9 +89,15 @@ static CGFloat const kNumCellsPerRow = 3.0;
 
         void (^unexpectedBehavior)(NSString *) = ^(NSString *message) {
             dispatch_async(dispatch_get_main_queue(), ^{
-                [strongSelf showAlertControllerWithMessage:message withCompletionBlock:^{
-                    cleanup(NO);
-                }];
+                [strongSelf showAlertControllerWithMessage:message
+                                               cancelTitle:@"OK"
+                                              defaultTitle:@"Try Again"
+                                 withActionCompletionBlock:^(UIAlertAction *action) {
+                                     cleanup(NO);
+                                     if (action.style != UIAlertActionStyleCancel) {
+                                         [strongSelf requestBusinesses];
+                                     }
+                                 }];
             });
         };
 
@@ -142,28 +142,19 @@ static CGFloat const kNumCellsPerRow = 3.0;
             scrollView.contentSize.height + kPullToRefreshOffset;
 }
 
-- (void)showAlertControllerWithMessage:(NSString *)message withCompletionBlock:(void(^)(void))completionBlock {
+- (void)showAlertControllerWithMessage:(NSString *)message
+                           cancelTitle:(NSString *)cancelTitle
+                          defaultTitle:(NSString *)defaultTitle
+             withActionCompletionBlock:(void(^)(UIAlertAction *))actionCompletionBlock {
+
     UIAlertController *controller = [UIAlertController alertControllerWithTitle:@"Yelpify"
-                                                                         message:message
-                                                                  preferredStyle:UIAlertControllerStyleAlert];
-    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"OK"
+                                                                        message:message
+                                                                 preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:cancelTitle
                                                            style:UIAlertActionStyleCancel
-                                                         handler:^(UIAlertAction * _Nonnull action) {
-                                                             if (completionBlock) {
-                                                                 completionBlock();
-                                                             }
-                                                         }];
-    __weak typeof(self)weakSelf = self;
-    UIAlertAction *tryAgainAction = [UIAlertAction actionWithTitle:@"Try Again" style:UIAlertActionStyleDefault
-                                                          handler:^(UIAlertAction * _Nonnull action) {
-                                                              __strong typeof(weakSelf)strongSelf = weakSelf;
-                                                              if (completionBlock) {
-                                                                  completionBlock();
-                                                              }
-                                                              if (strongSelf) {
-                                                                  [strongSelf requestBusinesses];
-                                                              }
-                                                          }];
+                                                         handler:actionCompletionBlock];
+    UIAlertAction *tryAgainAction = [UIAlertAction actionWithTitle:defaultTitle style:UIAlertActionStyleDefault
+                                                           handler:actionCompletionBlock];
     [controller addAction:cancelAction];
     [controller addAction:tryAgainAction];
     [self presentViewController:controller animated:YES completion:nil];
@@ -173,7 +164,9 @@ static CGFloat const kNumCellsPerRow = 3.0;
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
 
-    MABusinessCollectionViewCell *cell = (MABusinessCollectionViewCell *)[collectionView dequeueReusableCellWithReuseIdentifier:kCollectionViewCellReuseID forIndexPath:indexPath];
+    MABusinessCollectionViewCell *cell = (MABusinessCollectionViewCell *)[collectionView
+                                                                          dequeueReusableCellWithReuseIdentifier:kCollectionViewCellReuseID
+                                                                          forIndexPath:indexPath];
 
     UIImage *image = [self.imageCache imageAtIndex:indexPath.row];
     if (image) {

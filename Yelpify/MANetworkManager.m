@@ -17,13 +17,8 @@
     static MANetworkManager *manager = nil;
     dispatch_once(&onceToken, ^{
         manager = [[self alloc] init];
-        [manager setup];
     });
     return manager;
-}
-
-- (void)setup {
-
 }
 
 #pragma mark - Class Methods
