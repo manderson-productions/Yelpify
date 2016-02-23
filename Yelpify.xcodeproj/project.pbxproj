@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		223B87641C7BB86D00E6E934 /* MAImageCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 223B87631C7BB86D00E6E934 /* MAImageCache.m */; };
 		223B87671C7BC97B00E6E934 /* MACacheObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 223B87661C7BC97B00E6E934 /* MACacheObject.m */; };
+		223B876A1C7C1C3F00E6E934 /* MALocationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 223B87691C7C1C3F00E6E934 /* MALocationManager.m */; };
 		22EF76631C7A5CBB00951729 /* MANetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF76621C7A5CBB00951729 /* MANetworkManager.m */; };
 		22EF766F1C7A630900951729 /* MARequestBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF766E1C7A630900951729 /* MARequestBuilder.m */; };
 		22EF76731C7A769B00951729 /* MABusinessCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 22EF76711C7A769B00951729 /* MABusinessCollectionViewCell.m */; };
@@ -37,6 +38,8 @@
 		223B87631C7BB86D00E6E934 /* MAImageCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAImageCache.m; sourceTree = "<group>"; };
 		223B87651C7BC97B00E6E934 /* MACacheObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACacheObject.h; sourceTree = "<group>"; };
 		223B87661C7BC97B00E6E934 /* MACacheObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACacheObject.m; sourceTree = "<group>"; };
+		223B87681C7C1C3F00E6E934 /* MALocationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MALocationManager.h; sourceTree = "<group>"; };
+		223B87691C7C1C3F00E6E934 /* MALocationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MALocationManager.m; sourceTree = "<group>"; };
 		22EF76611C7A5CBB00951729 /* MANetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MANetworkManager.h; sourceTree = "<group>"; };
 		22EF76621C7A5CBB00951729 /* MANetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MANetworkManager.m; sourceTree = "<group>"; };
 		22EF766D1C7A630900951729 /* MARequestBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MARequestBuilder.h; sourceTree = "<group>"; };
@@ -122,6 +125,8 @@
 				223B87631C7BB86D00E6E934 /* MAImageCache.m */,
 				223B87651C7BC97B00E6E934 /* MACacheObject.h */,
 				223B87661C7BC97B00E6E934 /* MACacheObject.m */,
+				223B87681C7C1C3F00E6E934 /* MALocationManager.h */,
+				223B87691C7C1C3F00E6E934 /* MALocationManager.m */,
 			);
 			path = Yelpify;
 			sourceTree = "<group>";
@@ -305,6 +310,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				22F353311C7A52EB00811E94 /* AppDelegate.swift in Sources */,
+				223B876A1C7C1C3F00E6E934 /* MALocationManager.m in Sources */,
 				223B87641C7BB86D00E6E934 /* MAImageCache.m in Sources */,
 				22EF76731C7A769B00951729 /* MABusinessCollectionViewCell.m in Sources */,
 				223B87671C7BC97B00E6E934 /* MACacheObject.m in Sources */,
