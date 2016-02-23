@@ -11,6 +11,7 @@
 #import "MABusinessCollectionViewCell.h"
 #import "Yelpify-Swift.h"
 #import "MAImageCache.h"
+#import "MALocationManager.h"
 
 static NSString *const kCollectionViewCellReuseID = @"CollectionViewCellReuseID";
 static NSUInteger const kNumberOfSectionsInCollectionView = 1;
@@ -30,7 +31,7 @@ static CGFloat const kNumCellsPerRow = 3.0;
     [super viewDidLoad];
 
     [self setupCache];
-    [self requestBusinesses];
+    [self handleUserLocationAndInitialNetworkRequest];
 }
 
 #pragma mark - Setup Methods
@@ -39,21 +40,53 @@ static CGFloat const kNumCellsPerRow = 3.0;
     self.imageCache = [MAImageCache unarchive];
 }
 
+- (void)handleUserLocationAndInitialNetworkRequest {
+    __weak typeof(self)weakSelf = self;
+    [MALocationManager beginTrackingUserLocationWithAuthStatusChangedBlock:^(CLAuthorizationStatus status) {
+        __strong typeof(weakSelf)strongSelf = weakSelf;
+        if (!strongSelf) { return; }
+
+        if (status == kCLAuthorizationStatusDenied) {
+            UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Yelpify"
+                                                                                     message:@"If you would like to see specific \
+                                                  businesses in your location, please turn \
+                                                  on location services in your settings."
+                                                                              preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertAction *cancelAction = [UIAlertAction actionWithTitle:@"No thanks"
+                                                                   style:UIAlertActionStyleCancel
+                                                                 handler:^(UIAlertAction * _Nonnull action) {
+                                                                     [strongSelf requestBusinesses];
+                                                                 }];
+            UIAlertAction *openSettingsAction = [UIAlertAction actionWithTitle:@"Take me there"
+                                                                         style:UIAlertActionStyleDefault
+                                                                       handler:^(UIAlertAction * _Nonnull action) {
+                                                                           NSURL *settingsURL = [NSURL URLWithString:UIApplicationOpenSettingsURLString];
+                                                                           if (settingsURL) {
+                                                                               [[UIApplication sharedApplication] openURL:settingsURL];
+                                                                           }
+                                                                       }];
+            [alertController addAction:cancelAction];
+            [alertController addAction:openSettingsAction];
+            [strongSelf presentViewController:alertController animated:YES completion:nil];
+        } else {
+            [strongSelf requestBusinesses];
+        }
+    }];
+}
+
 #pragma mark - Custom Methods
 
 - (void)requestBusinesses {
     self.isRefreshing = YES;
-    NSLog(@"Started Refreshing");
-    __weak typeof(self)weakSelf = self;
     [MAActivityIndicatorView show];
 
+    __weak typeof(self)weakSelf = self;
     [MANetworkManager searchWithOffset:self.imageCache.count completionBlock:^(NSArray *results, NSError *error) {
         __strong typeof(weakSelf)strongSelf = weakSelf;
         if (!strongSelf) { return; }
 
         void (^cleanup)(BOOL) = ^(BOOL doReloadData) {
             [MAActivityIndicatorView hide];
-            NSLog(@"Stopped Refreshing");
             if (doReloadData) {
                 [strongSelf.collectionView reloadData];
             }
