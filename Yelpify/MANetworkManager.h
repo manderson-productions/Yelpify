@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-typedef void (^APIResultsBlock)(NSArray *results, NSError *error);
+typedef void (^APIResultsBlock)(NSArray <NSDictionary <NSString *, NSObject *> *> *results, NSError *error);
 
 @interface MANetworkManager : NSObject
 
