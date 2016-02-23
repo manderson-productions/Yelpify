@@ -8,6 +8,7 @@
 
 #import "MANetworkManager.h"
 #import "MARequestBuilder.h"
+#import "MALocationManager.h"
 
 @implementation MANetworkManager
 
@@ -28,7 +29,14 @@
 #pragma mark - Class Methods
 
 + (void)searchWithOffset:(NSUInteger)offset completionBlock:(APIResultsBlock)completionBlock {
-    NSURLRequest *request = [MARequestBuilder searchRequestWithOffset:offset];
+    // Get the locality for the user if one is available. Otherwise, sending nil will defer to the
+    // default location with which to search local businesses
+    CLPlacemark *currentPlacemark = [MALocationManager currentPlacemark];
+    NSString *locality = nil;
+    if (currentPlacemark) {
+        locality = currentPlacemark.locality;
+    }
+    NSURLRequest *request = [MARequestBuilder searchRequestWithOffset:offset location:locality];
 
     NSURLSession *session = [NSURLSession sharedSession];
     [[session dataTaskWithRequest:request completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {

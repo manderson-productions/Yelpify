@@ -23,7 +23,7 @@ static NSString * const kHTTPSScheme = @"https";
 @implementation MARequestBuilder
 
 + (NSURLRequest *)searchRequestWithOffset:(NSUInteger)offset {
-    return [MARequestBuilder searchRequestWithOffset:offset location:kDefaultLocation];
+    return [MARequestBuilder searchRequestWithOffset:offset location:nil];
 }
 
 + (NSURLRequest *)searchRequestWithOffset:(NSUInteger)offset location:(NSString *)location {
@@ -33,7 +33,7 @@ static NSString * const kHTTPSScheme = @"https";
 + (NSURLRequest *)searchRequestWithOffset:(NSUInteger)offset
                                  location:(NSString *)location
                                 rateLimit:(NSUInteger)rateLimit {
-    NSDictionary *params = @{@"offset": @(offset), @"location": location, @"rateLimit": @(rateLimit)};
+    NSDictionary *params = @{@"offset": @(offset), @"location": location ?: kDefaultLocation, @"rateLimit": @(rateLimit)};
     return [TDOAuth URLRequestForPath:kSearchAPIPath
                         GETParameters:params
                                scheme:kHTTPSScheme
