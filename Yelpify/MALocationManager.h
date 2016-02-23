@@ -15,6 +15,7 @@ typedef void(^CLAuthorizationStatusChangedBlock)(CLAuthorizationStatus);
 
 + (void)beginTrackingUserLocationWithAuthStatusChangedBlock:(CLAuthorizationStatusChangedBlock _Nullable)authStatusChangedBlock;
 + (CLPlacemark * _Nullable)currentPlacemark;
-+ (CLAuthorizationStatus)currentAuthStatus;
+
+- (instancetype _Nullable)init __attribute__((unavailable("Use +beginTrackingUserLocationWithAuthStatusChangedBlock instead.")));
 
 @end

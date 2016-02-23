@@ -52,10 +52,6 @@
     return [MALocationManager sharedInstance].currentPlacemark;
 }
 
-+ (CLAuthorizationStatus)currentAuthStatus {
-    return [CLLocationManager authorizationStatus];
-}
-
 #pragma mark - CLLocationManagerDelegate
 
 - (void)locationManager:(CLLocationManager *)manager didChangeAuthorizationStatus:(CLAuthorizationStatus)status {

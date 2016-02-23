@@ -12,9 +12,8 @@ typedef void (^APIResultsBlock)(NSArray <NSDictionary <NSString *, NSObject *> *
 
 @interface MANetworkManager : NSObject
 
-+ (MANetworkManager *)sharedInstance;
 + (void)searchWithOffset:(NSUInteger)offset completionBlock:(APIResultsBlock)completionBlock;
 
-- (instancetype)init __attribute__((unavailable("Use -sharedInstance: instead.")));
+- (instancetype)init __attribute__((unavailable("Use +searchWithOffset instead.")));
 
 @end
