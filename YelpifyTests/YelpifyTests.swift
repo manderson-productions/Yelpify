@@ -21,16 +21,37 @@ class YelpifyTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
+    func testSavingToImageCacheProducesExpectedResults() {
+        let e = self.expectationWithDescription("testSavingToImageCacheProducesExpectedResults")
+        var imageCache = MAImageCache()
+        MANetworkManager.searchWithOffset(imageCache.count()) { (results, error) -> Void in
+            let imageURLs = results.reduce([NSURL](), combine: { (var output, dict) in
+                let urlString = dict["image_url"] as! String
+                output.append(NSURL(string: urlString)!)
+                return output
+            })
+            imageCache.cacheImagesFromURLStrings(imageURLs, withCompletionBlock: {
+                XCTAssertEqual(imageURLs.count, Int(imageCache.count()))
+                imageCache = MAImageCache.unarchive()
+                XCTAssertEqual(imageURLs.count, Int(imageCache.count()))
+                e.fulfill()
+            })
+        }
+        self.waitForExpectationsWithTimeout(120) {
+            if $0 != nil { print("Error: \($0)") }
         }
     }
-    
+
+    func testSearchWithOffsetMethodReturnsValidResultsWithImageURLField() {
+        let e = self.expectationWithDescription("testSearchWithOffsetMethodReturnsValidResultsWithImageURLField")
+        let randoNumber: UInt = 43
+        MANetworkManager.searchWithOffset(randoNumber) { (results, error) in
+            XCTAssertNotNil(results)
+            XCTAssertNil(error)
+            e.fulfill()
+        }
+        self.waitForExpectationsWithTimeout(120) {
+            if $0 != nil { print("Error: \($0)") }
+        }
+    }
 }
